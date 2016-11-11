@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'inventory-app',
   templateUrl: 'inventory-app.html',
   styleUrls: ['inventory-app.component.css']
 })
