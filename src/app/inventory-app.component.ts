@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product-row/product-row.model.ts'
 
 @Component({
   selector: 'inventory-app',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['inventory-app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  product: Product;
+
+  constructor() {
+    this.product = new Product(
+      'NICEHAT',
+      'A Nice Black Hat',
+      '/assets/images/products/black-hat.jpg',
+      ['Men', 'Accessories', 'Hats'],
+       29.99
+    );
+  }
 }

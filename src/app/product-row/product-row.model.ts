@@ -1,7 +1,7 @@
 /**
  * Provides a `Product` object
  */
-class Product {
+export class Product {
   constructor(
     public sku: string,
     public name: string,
