@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter} from '@angular/core';
 import { Product } from '../product-row/product.model.ts';
 
 @Component({
   selector: 'products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.css']
+  styleUrls: ['./products-list.component.css'],
+  outputs: ['onProductSelected'],
 })
 
 export class ProductsListComponent {
   products: Product[];
 
+  /**
+   * @ouput onProductSelected - outputs the current Product
+   */
+  onProductSelected: EventEmitter<Product>;
+
   constructor() {
+    this.onProductSelected = new EventEmitter();
+
     this.products = [
       new Product(
         'MYSHOES',
@@ -34,5 +42,9 @@ export class ProductsListComponent {
         29.99
       )
     ];
+  }
+
+  selectProduct(product: Product): void {
+    this.onProductSelected.emit(product);
   }
 }
