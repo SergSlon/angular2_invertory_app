@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './inventory-app.component';
 import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductImageComponent } from './product-image/product-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductRowComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductImageComponent
   ],
   imports: [
     BrowserModule,
